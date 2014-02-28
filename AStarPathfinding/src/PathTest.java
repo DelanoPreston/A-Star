@@ -15,6 +15,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 public class PathTest extends JFrame {
+	private static final long serialVersionUID = -7321655500356762440L;
 	/** The map on which the units will move */
 	private GameMap map = new GameMap();
 	/** The path finder we'll use to search our map */
@@ -61,7 +62,8 @@ public class PathTest extends JFrame {
 			System.exit(0);
 		}
 
-		finder = new AStarPathFinder(map, 500, true);
+		// finder = new AStarPathFinder(map, 500, true);
+		finder = new AStarPathFinder(map, 500, false);
 
 		addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
@@ -235,6 +237,7 @@ public class PathTest extends JFrame {
 	 * @param argv
 	 *            The arguments passed into the game
 	 */
+	@SuppressWarnings("unused")
 	public static void main(String[] argv) {
 		PathTest test = new PathTest();
 	}

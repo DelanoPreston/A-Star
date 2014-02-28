@@ -1,4 +1,5 @@
 
+
 public class GameMap implements TileBasedMap{
 	/** The map width in tiles */
 	public static final int WIDTH = 30;

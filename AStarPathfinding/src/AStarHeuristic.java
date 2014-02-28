@@ -1,3 +1,4 @@
+
 public interface AStarHeuristic {
 	/**
 	 * Get the additional heuristic cost of the given tile. This controls the

@@ -1,3 +1,4 @@
+
 public class ClosestHeuristic implements AStarHeuristic {
 	/**
 	 * @see AStarHeuristic#getCost(TileBasedMap, UnitMover, int, int, int, int)

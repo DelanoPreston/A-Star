@@ -1,3 +1,5 @@
+
+
 public interface TileBasedMap {
 	/**
 	 * Get the width of the tile map. The slightly odd name is used to

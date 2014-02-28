@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class AStarPathFinder implements PathFinder{
 	/** The set of nodes that have been searched through */
-	private ArrayList closed = new ArrayList();
+	private ArrayList<Node> closed = new ArrayList<>();
 	/** The set of nodes that we do not yet consider fully searched */
 	private SortedList open = new SortedList();
 
@@ -31,6 +31,7 @@ public class AStarPathFinder implements PathFinder{
 	 */
 	public AStarPathFinder(TileBasedMap map, int maxSearchDistance, boolean allowDiagMovement) {
 		this(map, maxSearchDistance, allowDiagMovement, new ClosestHeuristic());
+//		this(map, maxSearchDistance, false, new ClosestHeuristic());
 	}
 
 	/**
@@ -341,7 +342,7 @@ public class AStarPathFinder implements PathFinder{
 	 */
 	private class SortedList {
 		/** The list of elements */
-		private ArrayList list = new ArrayList();
+		private ArrayList<Node> list = new ArrayList<>();
 
 		/**
 		 * Retrieve the first element from the list
@@ -366,7 +367,7 @@ public class AStarPathFinder implements PathFinder{
 		 *            The element to add
 		 */
 		public void add(Object o) {
-			list.add(o);
+			list.add((Node)o);
 			Collections.sort(list);
 		}
 
@@ -404,7 +405,7 @@ public class AStarPathFinder implements PathFinder{
 	/**
 	 * A single node in the search graph
 	 */
-	private class Node implements Comparable {
+	private class Node implements Comparable<Object> {
 		/** The x coordinate of the node */
 		private int x;
 		/** The y coordinate of the node */
