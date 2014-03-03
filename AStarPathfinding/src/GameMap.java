@@ -156,7 +156,12 @@ public class GameMap implements TileBasedMap{
 	 * @see TileBasedMap#getCost(UnitMover, int, int, int, int)
 	 */
 	public float getCost(UnitMover mover, int sx, int sy, int tx, int ty) {
+		
+		if(Math.abs(sx-tx) == 1 && Math.abs(sy-ty) == 1)
+			return (float)Math.sqrt(1 + 1);
 		return 1;
+		
+		
 	}
 
 	/**

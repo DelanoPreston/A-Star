@@ -62,8 +62,8 @@ public class PathTest extends JFrame {
 			System.exit(0);
 		}
 
-		// finder = new AStarPathFinder(map, 500, true);
-		finder = new AStarPathFinder(map, 500, false);
+		 finder = new AStarPathFinder(map, 500, true);
+//		finder = new AStarPathFinder(map, 500, false);
 
 		addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
